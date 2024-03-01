@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Peach Cake';
+    src: url('../Peach Cake.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RoutleHarmony';
+    src: url('../RoutleHarmony.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('../GreatVibes-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Peach Cake', sans-serif; /* Use the defined font-family for the body */
+    background-image: url('/assets/default.jpg');
+    font-size: 1.8rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Additional styles for the body can be added here */
+}
+

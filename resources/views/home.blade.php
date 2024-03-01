@@ -4,12 +4,15 @@
 
 @section('content')
     <div class="container">
-        <button class="btn btn-success">Hello! {{ $Card->Owner}}</button>
+
+        <div class="w-100 text-center h5">Hello {{ ucwords(strtolower($Card->Owner)) }}!</div>
 
 
         <div class="mb-3 mt-4">
-            <textarea class="form-control" id="loveNote" rows="3"></textarea>
-            <button class="btn btn-success mt-2" id="submitNote">Submit</button>
+            <textarea class="form-control" id="loveNote" rows="10"></textarea>
+            <div class="col-12">
+                <button class="float-end btn bg-success border border-secondary mt-2 rounded-pill text-white" id="submitNote">Send <i class="fa-regular fa-heart "></i></button>
+            </div>
         </div>
     </div>
 

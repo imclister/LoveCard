@@ -17,7 +17,8 @@ use App\Http\Controllers\NoteController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('scan');
 });
 Route::get('/note', function () {
     return view('note_create');

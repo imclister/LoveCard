@@ -10,12 +10,58 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    {{-- <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+
+
+
+    <style>
+
+        @font-face {
+            font-family: 'Peach Cake';
+            src: url('/assets/Peach Cake.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        @font-face {
+            font-family: 'RoutleHarmony';
+            src: url('/assets/RoutleHarmony.ttf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GreatVibes';
+            src: url('/assets/GreatVibes-Regular.ttf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Peach Cake', sans-serif; /* Use the defined font-family for the body */
+            background-image: url('/assets/default.jpg');
+            font-size: 1.8rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Additional styles for the body can be added here */
+        }
+
+
+    </style>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/61c602fcc8.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -24,7 +70,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                   Love Card
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
