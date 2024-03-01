@@ -39,7 +39,8 @@ class NoteController extends Controller
                      ->orderBy('created_at', 'desc')
                      ->get(['Note', 'created_at']);
 
-        $TopNotes = Note::orderBy('created_at', 'desc')
+        $TopNotes = Note::where('card_id', $partnerCardID)
+                        ->orderBy('created_at', 'desc')
                         ->limit(15 - $UnreadNotes->count())
                         ->get(['Note', 'created_at']);
 
@@ -52,4 +53,18 @@ class NoteController extends Controller
 
         return view('notes')->with(['Notes' => $Notes]);
     }
+    public function unreadmessages_get() {
+
+        $cardID = Session::get('card_id');
+        $Card   = Card::findOrFail($cardID);
+        $partnerCardID = $Card->card_id;
+        $unreadMessagesCount = Note::where('status', 'Unread')
+                            ->where('card_id', $partnerCardID)
+                            ->count();
+
+        // Return the count as JSON response
+        return response()->json($unreadMessagesCount);
+    }
+
+
 }

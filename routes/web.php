@@ -26,16 +26,18 @@ Route::get('/note', function () {
 
 
 Route::get('/scan', function () { return view('scan'); });
-Route::post('/addpassword', [CardController::class, 'addpassword'])->name('addpassword');                  //returns the page
 
-Route::post('/scan', [CardController::class, 'scan'])->name('scan');                                //returns the page
-Route::post('/card/create', [CardController::class, 'create'])->name('createcard');                  //returns the page
+//CARD CONTROLLER
+Route::post('/addpassword',             [CardController::class, 'addpassword'           ])->name('addpassword');
+Route::post('/scan',                    [CardController::class, 'scan'                  ])->name('scan');
+Route::post('/card/create',             [CardController::class, 'create'                ])->name('createcard');
 
 
 //NOTE CONTROLLER
-Route::post('/addnote',     [NoteController::class, 'create'    ])->name('addnote');                                //returns the page
-Route::get ('/messages',    [NoteController::class, 'view'      ])->name('view');                                //returns the page
+Route::post('/addnote',                 [NoteController::class, 'create'                ])->name('addnote');
+Route::get ('/notes',                   [NoteController::class, 'view'                  ])->name('view');
+Route::get ('/unreadmessages_get',      [NoteController::class, 'unreadmessages_get'    ])->name('unreadmessages_get');
+
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
